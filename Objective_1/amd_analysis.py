@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import librosa
 
-file_path = "C:/Users/ashut/OneDrive/Desktop/speech_processing_assn_1/recordings/hindi_vowel_aa.wav"
+file_path = "recordings/hindi_vowel_aa.wav"
 y, sr = librosa.load(file_path, sr=44100)
 # Find a good starting point (e.g., 15000 samples in)
 start_sample = 33700 
@@ -49,4 +49,5 @@ plt.axvline(x=pitch_period_samples, color='red', linestyle='--',
             label=f'Pitch Period ({pitch_period_samples} samples)')
 plt.legend()
 plt.grid(True)
+
 plt.show()
