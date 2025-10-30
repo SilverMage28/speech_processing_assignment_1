@@ -73,4 +73,19 @@ The following Hindi consonants (in their default /a/ vowel form) were recorded:
 | त्र | /t̪ra/ | `hindi_cons_tra.wav` |
 | ज्ञ | /ɡja/ | `hindi_cons_gya.wav` |
 
-### Repository Structure
+### Script Descriptions
+
+* **`Objective_1/amd_analysis.py`**: Implements the Average Magnitude Difference Function (AMDF) for Objective 1. It loads a specified vowel file and given a stable frame, calculates the pitch in Hz by finding the first significant minimum in the AMDF.
+* **`Objective_2/formant_analysis_pyceps.py`**: Implements the cepstral analysis for Objective 2. It uses the included `pyceps` library to analyze 6 consecutive frames of a vowel, calculating the average F0, F1, F2, and F3. It also generates the stacked plots of the cepstral sequence and the smoothed spectral envelope.
+
+### Dependencies
+
+The analysis scripts require the following Python libraries:
+* `numpy`
+* `librosa`
+* `matplotlib`
+* `scipy`
+
+You can install them using pip:
+```bash
+pip install numpy librosa matplotlib scipy
